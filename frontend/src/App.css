@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0A1828; /* Dark classic blue */
+  color: #BFA181; /* Gold text */
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(15px, 2vw, 25px);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.app-title {
+  margin-top: 20px;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+/* ----------------- AUTH ----------------- */
+.auth-container {
+  background: #178582;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #BFA181;
+  background: #0A1828;
+  color: #BFA181;
+  font-size: 16px;
+}
+
+.btn-primary {
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  background: #0A1828;
+  color: #BFA181;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #BFA181;
+  color: #0A1828;
+}
+
+.switch-mode {
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ----------------- TOP BAR / PROFILE ----------------- */
+.top-bar {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  background: #0A1828;
+  color: #BFA181;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #178582;
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 140px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.profile-dropdown button {
+  width: 100%;
+  padding: 10px;
+  background: #178582;
+  color: #BFA181;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.profile-dropdown button:hover {
+  background: #0A1828;
+  color: #178582;
+}
+
+/* ----------------- TEXTAREA / TONE SELECT ----------------- */
+.input-box,
+.tone-select {
+  width: 100%;
+  max-width: 900px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #BFA181;
+  background: #0A1828;
+  color: #BFA181;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea.input-box {
+  min-height: 100px;
+  resize: none;
+}
+
+.tone-select {
+  height: 40px;
+}
+
+/* ----------------- CURRENT REPLY ----------------- */
+.current-reply {
+  width: 100%;
+  max-width: 900px;
+  background: #BFA181;
+  color: #0A1828;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.current-reply h3 {
+  margin: 0 0 10px 0;
+}
+
+.btn-gmail {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #0A1828;
+  color: #BFA181;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-gmail:hover {
+  background: #BFA181;
+  color: #0A1828;
+}
+
+/* ----------------- REPLY HISTORY ----------------- */
+.previous-replies {
+  width: 100%;
+  max-width: 900px;
+  background: #178582;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.previous-replies h2 {
+  margin-top: 0;
+}
+
+.reply-item {
+  background: #0A1828;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.reply-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* ----------------- BUTTONS ----------------- */
+.btn-secondary {
+  padding: 8px 12px;
+  background: #0A1828;
+  color: #BFA181;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-secondary:hover {
+  background: #BFA181;
+  color: #0A1828;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media screen and (max-width: 768px) {
+  .input-box,
+  .tone-select,
+  .current-reply,
+  .previous-replies {
+    width: 95%;
+  }
+
+  .profile-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
