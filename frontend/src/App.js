@@ -50,12 +50,11 @@ const [user, setUser] = useState(null);
   if (token) {
     fetchReplies();
 
-    //  clear previous session UI
     setSubject("");
     setBody("");
     setUserMessage("");
   }
-}, [token]);
+}, [fetchReplies, token]);
 
   // ================= AUTH (LOGIN / SIGNUP) =================
   const handleAuth = async () => {
