@@ -49,12 +49,10 @@ const [user, setUser] = useState(null);
   useEffect(() => {
   if (token) {
     fetchReplies();
-
     setSubject("");
     setBody("");
-    setUserMessage("");
   }
-}, [fetchReplies, token]);
+}, [token]);
 
   // ================= AUTH (LOGIN / SIGNUP) =================
   const handleAuth = async () => {
